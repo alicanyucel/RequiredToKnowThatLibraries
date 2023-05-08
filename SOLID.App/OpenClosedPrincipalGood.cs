@@ -51,6 +51,7 @@ namespace SOLID.App.OpenClosedPrincipalGood
         {
             return salaryCalculator.Calculate(salary);
         }
+
     }
 
 }

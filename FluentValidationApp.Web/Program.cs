@@ -1,4 +1,6 @@
+using FluentValidation.AspNetCore;
 using FluentValidationApp.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -9,7 +11,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ExampleDb;Integrated Security=True;");
 });
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddFluentValidation(options =>
+{
+    //This statement Takes All Singleton Instance
+    //Bu ifade tüm singleton instancelarýný alýr. 
+    options.RegisterValidatorsFromAssemblyContaining<Program>();
+});
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
 
 var app = builder.Build();
 

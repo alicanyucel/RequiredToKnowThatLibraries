@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID.App.DependencyInversiınGoodAndBad
+namespace SOLID.App.DependencyInversionGoodAndBad
 {
     public class ProductService
     {

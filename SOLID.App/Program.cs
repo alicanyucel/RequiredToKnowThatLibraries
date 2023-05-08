@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using SOLID.App.DependencyInversiınGoodAndBad;
+using SOLID.App.DependencyInversionGoodAndBad;
 using SOLID.App.LiskovSubstitutionPrincipalGood;
 using SOLID.App.OpenClosedPrincipalGood2;
 using System.Threading.Channels;

@@ -28,6 +28,32 @@
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input type="date" asp-for="DateOfBirth" class="form-control" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <hr />
+            <h1>Addresses</h1>
+            @for(int i =0;i<2;i++)
+            {
+                <div class="form-group">
+                    <label asp-for="Address[i].AddressDetail" class="control-label"></label>
+                    <input type="date" asp-for="Address[i].AddressDetail" class="form-control" />
+                    <span asp-validation-for="Address[i].AddressDetail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address[i].Province" class="control-label"></label>
+                    <input type="date" asp-for="Address[i].Province" class="form-control" />
+                    <span asp-validation-for="Address[i].Province" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address[i].PostCode" class="control-label"></label>
+                    <input type="date" asp-for="Address[i].PostCode" class="form-control" />
+                    <span asp-validation-for="Address[i].PostCode" class="text-danger"></span>
+                </div>
+            }
+
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

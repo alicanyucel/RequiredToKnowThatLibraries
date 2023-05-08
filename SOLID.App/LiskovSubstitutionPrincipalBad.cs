@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID.App.LiskovSubstitutionPrincipalGood
+namespace SOLID.App.LiskovSubstitutionPrincipalBad
 {
-    public class BasePhone
+    public abstract class BasePhone
     {
         public void Call()
         {
             Console.WriteLine("Has Called");
         }
-    }
-    public interface ITakePhoto
-    {
-        void TakePhoto();
+        public abstract void TakePhoto();
     }
 
-    public class IPhone : BasePhone, ITakePhoto
+    public class IPhone : BasePhone
     {
-        public void TakePhoto()
+        public override void TakePhoto()
         {
             Console.WriteLine("Taked Photo.");
         }
     }    
     public class Nokia : BasePhone
     {
-
+        public override void TakePhoto()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
