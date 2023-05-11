@@ -10,5 +10,10 @@
         // Do want use for this way Customer.Address[1].Name Use IList interface
         public IList<Address> Address { get; set; }
         public Gender Gender { get; set; }
+        public CreditCard CreditCard { get; set; }
+        public string GetFullName()
+        {
+            return $"{Name}-{Email}-{Age}";
+        }
     }
 }
