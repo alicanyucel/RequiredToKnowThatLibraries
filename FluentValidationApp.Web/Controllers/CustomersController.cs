@@ -15,12 +15,11 @@ namespace FluentValidationApp.Web.Controllers
         private readonly AppDbContext _context;
         private readonly IValidator<Customer> _customerValidator;
 
-        public CustomersController(AppDbContext context,IValidator<Customer> customerValidator)
+        public CustomersController(AppDbContext context, IValidator<Customer> customerValidator)
         {
             _context = context;
             _customerValidator = customerValidator;
         }
-
         // GET: Customers
         public async Task<IActionResult> Index()
         {
