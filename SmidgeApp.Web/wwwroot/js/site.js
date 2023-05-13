@@ -5,6 +5,6 @@
 
 // This Function is makes multipcalition process.
 
-function carpma(a, b) {
-    return a * b;
+function topla(a, b) {
+    return a + b;
 }
