@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID.App", "SOLID.App\SOLI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationApp.Web", "FluentValidationApp.Web\FluentValidationApp.Web.csproj", "{534B9973-1489-4C1A-B17F-C46C692D8421}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandling.Web", "ErrorHandling.Web\ErrorHandling.Web.csproj", "{B8A13EA9-213F-4D7A-AEE6-271512D9E977}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +23,10 @@ Global
 		{534B9973-1489-4C1A-B17F-C46C692D8421}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{534B9973-1489-4C1A-B17F-C46C692D8421}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{534B9973-1489-4C1A-B17F-C46C692D8421}.Release|Any CPU.Build.0 = Release|Any CPU
-		{476864DC-565D-4A9C-A130-7BE1B5F5D592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{476864DC-565D-4A9C-A130-7BE1B5F5D592}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{476864DC-565D-4A9C-A130-7BE1B5F5D592}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{476864DC-565D-4A9C-A130-7BE1B5F5D592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A13EA9-213F-4D7A-AEE6-271512D9E977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A13EA9-213F-4D7A-AEE6-271512D9E977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A13EA9-213F-4D7A-AEE6-271512D9E977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A13EA9-213F-4D7A-AEE6-271512D9E977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
