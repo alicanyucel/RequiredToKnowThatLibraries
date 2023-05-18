@@ -1,7 +1,13 @@
+using ErrorHandling.Web.Filter;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddMvc(options =>
+{
+    options.Filters.Add(new CustomHandleExceptionFilterAttribute() { ErrorPage="Error1"});
+});
 
 var app = builder.Build();
 
@@ -15,8 +21,10 @@ else
 {
     //I.Way
     app.UseDeveloperExceptionPage();
+    //This middleware was removed. Microsoft recommended a filter. That filter is DatabaseDeveloperErrorPageException();
+    //app.UseDatabaseErrorPage();
     //II.Way
-    app.UseStatusCodePages("text/plain","Has a error. Status code:{0}");
+    //app.UseStatusCodePages("text/plain","Has a error. Status code:{0}");
     //III.Way
     app.UseStatusCodePages(async context =>
     {
