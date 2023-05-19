@@ -23,7 +23,6 @@ namespace ErrorHandling.Web.Controllers
             int result = num1 / num2;
             return View(result);
         }
-
         public IActionResult Privacy()
         {
             throw new FileNotFoundException();
@@ -39,6 +38,14 @@ namespace ErrorHandling.Web.Controllers
             ViewBag.message = exception.Error.Message;
 
 
+            return View();
+        }
+        public IActionResult Error1()
+        {
+            return View();
+        }
+        public IActionResult Error2()
+        {
             return View();
         }
     }
